@@ -1,10 +1,43 @@
 
+ var nbElements = 50; // Number of stars & sparkles
+
+ // CSS Classes available
+ var shapes = ['sparkle', 'star'];
+ var sizes = ['','medium', 'small'];
+ var styles = ['', 'alt', 'alt2'];
+ var animations = ['pulse', 'pulse-1', 'pulse-2', 'pulse-3'];
+ 
+ // Random generating elements
+ for(var i = 0; i < nbElements; i++){
+   
+   // Random styles
+   var classes = shapes[rand(0,shapes.length)] + " ";
+   classes += sizes[rand(0,sizes.length)] + " ";
+   classes += styles[rand(0,styles.length)] + " ";
+   classes += animations[rand(0,animations.length)];
+   
+   // Random position
+   var style = "top:"+rand(0,100)+"%;left:"+rand(0,100)+"%;";
+   
+   $('body').append('<div class="'+classes+'" style="'+style+'"></div>');
+ }
+ 
+ function rand(min, max){
+   return Math.floor((Math.random() * max) + min);
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  (function() {
    const wheel = document.querySelector('.wheel');
    const startButton = document.querySelector('.button');
 
 
-   var texts = ["2000", "3000", "4000", "2500"]
+   var texts = ["4500", "5200", "3820", "4800", "4500","5200", "3820", "4800", "4500", "3850"]
 
     btn = document.getElementById("myBtn"),
     text = document.getElementById("myText"),
@@ -15,27 +48,32 @@ text.innerHTML = texts[0];
 
 function changeText() {
 
+
     index++;
     index %= texts.length
     text.innerHTML = texts[index];
+    
 
- 
+  console.log(texts[index])
+
+  return texts[index]
+   
     
 }
 
 
+let deg = 5000;
 
-   let deg =document.getElementById("myText").textContent;
-
-  
 
    startButton.addEventListener('click', () => {
     
-    changeText();
+
+  
+    
       //  Disable button during spin
      startButton.style.pointerEvents = 'none';
        // Calculate a new rotation between 5000 and 10 000
-    //  deg = changeText()
+     deg = changeText()
   
        // Set the transition on the wheel
      wheel.style.transition = 'all 10s ease-out';
@@ -64,29 +102,6 @@ function changeText() {
 
 
 
-
-$(document).ready(function(){
-  $('.customer-logos').slick({
-      slidesToShow: 6,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 1500,
-      arrows: false,
-      dots: false,
-      pauseOnHover: false,
-      responsive: [{
-          breakpoint: 768,
-          settings: {
-              slidesToShow: 4
-          }
-      }, {
-          breakpoint: 520,
-          settings: {
-              slidesToShow: 3
-          }
-      }]
-  });
-});
 
 
 
