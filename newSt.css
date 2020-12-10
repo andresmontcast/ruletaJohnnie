@@ -7,8 +7,8 @@
 
 
 #app {
-    width: 500px;
-    height: 500px;
+    width: 1000px;
+    height: 1000px;
     margin: 0 auto;
     position: relative;
     margin-top: 10%;
@@ -172,9 +172,9 @@
   
   .marker {
     position: absolute;
-    left: 362px;
-    top: 170px;
-    width: 131px;
+    left: 738px;
+    top: 458px;
+    width: 201px;
     z-index: 2;
     animation: bounce;
   }
