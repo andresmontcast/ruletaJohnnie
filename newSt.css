@@ -7,8 +7,8 @@
 
 
 #app {
-    width: 1000px;
-    height: 1000px;
+    width: 800px;
+    height: 800px;
     margin: 0 auto;
     position: relative;
     margin-top: 10%;
@@ -172,8 +172,8 @@
   
   .marker {
     position: absolute;
-    left: 738px;
-    top: 458px;
+    left: 555px;
+    top: 334px;
     width: 201px;
     z-index: 2;
     animation: bounce;
@@ -471,7 +471,7 @@
       -khtml-user-select: none;
       -ms-touch-action: pan-y;
       padding: 5%;
-      margin-top: 5%;
+      margin-top: -2%;
           touch-action: pan-y;
       -webkit-tap-highlight-color: transparent;
   
